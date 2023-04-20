@@ -1,0 +1,16 @@
+<div id="entrancePage" class="absolute h-screen w-full bg-black flex items-center justify-center z-50 transition-all ease-in-out duration-500">
+<p id="entrancePageText" class="text-white text-xl transition-all ease-in-out duration-500 ">Birleşik Lig</p>
+<img id="entrancePageIcon" class="w-20 h-20 rounded-full opacity-0 transition-all ease-in-out duration-700" src="https://media.licdn.com/dms/image/C4D0BAQF3vsUhK9Xhtg/company-logo_200_200/0/1519922756231?e=2147483647&v=beta&t=Y3czw_dbqQFVPYePqRDmJwnRZM7BSfSMU9w9mbDGZwU">
+</div>
+<div class="grid grid-cols-12 overflow-hidden bg-black">
+    <div [routerLink]="['/basketball/home']" class="relative group h-screen col-span-6 -skew-x-6 origin-top-left bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/2346/sport-high-united-states-of-america-ball.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] opacity-30 hover:cursor-pointer hover:opacity-100 transition-all ease-in-out duration-300">
+      <div class="absolute bottom-0 w-full h-0 opacity-75 bg-black group-hover:h-1/2 transition-all ease-in-out duration-500 flex items-center justify-center">
+         <h1 class="hidden group-hover:block transition-all ease-in-out duration-500 text-white text-sm sm:text-2xl">Birleşik Basketbol Ligi</h1>
+      </div>
+    </div>
+    <div [routerLink]="['/volleyball']" class="group h-screen col-span-6 -skew-x-6 origin-bottom-right bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/2365320/pexels-photo-2365320.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] opacity-30 hover:cursor-pointer hover:opacity-100 transition-all ease-in-out duration-300 ">
+        <div class="absolute top-0 w-full h-0 opacity-75 bg-black group-hover:h-1/2 transition-all ease-in-out duration-500 flex items-center justify-center">
+            <h1 class="hidden group-hover:block transition-all ease-in-out duration-500 text-white text-sm sm:text-2xl">Birleşik Voleybol Ligi</h1>
+         </div>
+    </div>
+</div>

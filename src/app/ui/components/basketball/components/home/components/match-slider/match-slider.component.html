@@ -1,0 +1,32 @@
+<div class="relative">
+    <div class="relative">
+        <button id="leftScrollBtn" (click)="leftScroll()" class="rounded-full w-10 h-10 absolute right-1/2 bottom-0 z-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100 bg-gray-300">
+            <svg class="w-8 h-8 p-2 scale-75 rotate-180 hover:scale-100 transition-all ease-in-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
+        </button>
+        <button id="rightScrollBtn" (click)="rightScroll()" class="rounded-full w-10 h-10 absolute left-1/2 bottom-0 z-50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100 bg-gray-300">
+            <svg class="w-8 h-8 p-2 scale-75 hover:scale-100 transition-all ease-in-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
+        </button>
+    
+        <div id="matches" class="flex min-w-fit overflow-x-hidden space-x-8 p-10 transition-all ease-in-out duration-500">
+    
+            <div  class="w-80 h-32 rounded-lg shadow-xl overflow-y-hidden bg-slate-500 grid-rows-3 p-3" *ngFor="let item of allGames">
+                   <h1 class="text-sm ml-3">{{item.stadium}}</h1>
+
+                <div class="row-span-1 flex justify-between mt-3">
+                    <img class="w-9 h-9 rounded-full" src={{item.homeTeam.logo}}>
+                    <p class="" >{{item.homeTeam.name}}</p>
+                    <h1 class="font-bold text-xl">{{item.homeTeamScore}}</h1>
+                </div>
+                <div class="row-span-1">
+                </div>
+                <div class="row-span-1 flex justify-between mt-3">
+                    <img class="w-9 h-9 rounded-full" src={{item.awayTeam.logo}}>
+                    <p class="" >{{item.awayTeam.name}}</p>
+                    <h1 class="font-bold text-xl">{{item.awayTeamScore}}</h1>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
